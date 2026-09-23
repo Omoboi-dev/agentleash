@@ -22,10 +22,15 @@ Running notes for the bounty feedback. Times are 2026-09-23.
 
 - `generate` produced typed hooks for all 12 functions, including ones taking tuples and optional returns.
 - Every generated write call hardcodes `postConditionMode: 'allow'`. For a template people copy, deny by default (with post conditions passed in) would be safer.
+- The generated write hooks always call the contract function with an empty post condition list (`fn(functionArgs, [])`), so a hook cannot carry post conditions at all. We called the generated `leash_createPolicy` and `leash_deposit` functions directly for the two calls that move the owner's STX.
+- Each generated hook repeats about 140 lines of the same transaction polling code. A shared helper would make `hooks.ts` much easier to read.
+- Read hooks do not run on their own; you call `call()` in an effect. Fine once known, but the docs could show that pattern.
 
 ## Deploy and frontend
 
-(fill in as we go)
+- `stacksdapp deploy --network testnet --yes` worked first time and wrote `deployments.json`.
+- On a fresh checkout, `npm run typecheck` in `frontend` fails on the template's own `Header.tsx` (`Cannot find module '@/public/logo.png'`) until `next build` has created `next-env.d.ts`.
+- Running the contract tests rewrites `contracts/deployments/default.simnet-plan.yaml` (drops `costs-5`), leaving a dirty git tree after every test run.
 
 ## Time
 

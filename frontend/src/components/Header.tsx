@@ -24,7 +24,7 @@ function Header() {
         <div className="flex items-center gap-3">
           <Image src={logo} alt="logo" width={32} height={32} />
           <span className="text-[#FFFFFF] text-[20px] md:text-[24.77px] font-medium font-instrument">
-            SfdStacks
+            Agent Leash
           </span>
         </div>  
         <NetworkBadge />
