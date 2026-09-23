@@ -34,5 +34,5 @@ Running notes for the bounty feedback. Times are 2026-09-23.
 
 ## Time
 
-- Scaffold to tested contract: (fill in)
-- Total to live on Vercel: (fill in)
+- Scaffold to tested contract deployed on testnet: about 30 minutes
+- Scaffold to full app live on Vercel, with a real agent demo: about 4 hours

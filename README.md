@@ -3,7 +3,7 @@
 Give your AI agent a budget it cannot break. An owner funds a spending policy for an agent key, and a Clarity contract on Stacks enforces who the agent can pay, how much per payment, and how much per period, with a one click revoke that returns the funds.
 
 - Contract (testnet): [`ST3DJQ6BC8EDG1NPRA05PZWKE78P33FXH6TXEWVXD.leash`](https://explorer.hiro.so/txid/ST3DJQ6BC8EDG1NPRA05PZWKE78P33FXH6TXEWVXD.leash?chain=testnet)
-- App: (https://agentleash-kappa.vercel.app/)
+- App: https://agentleash-kappa.vercel.app
 - Design: [docs/design.md](docs/design.md)
 
 Built with [Scaffold Stacks](https://scaffoldstacks.mintlify.app/) (`stacksdapp`), Clarity 6 and Next.js.
