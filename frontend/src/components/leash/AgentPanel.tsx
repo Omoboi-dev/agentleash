@@ -4,6 +4,7 @@ import { Cl } from '@stacks/transactions';
 import { useLeash_GetAvailable, useLeash_GetPolicy } from '@/generated/hooks';
 import { parsePolicy, parseUint } from '@/lib/leash';
 import PolicyCard from './PolicyCard';
+import Activity from './Activity';
 import Recipients from './Recipients';
 import Controls from './Controls';
 import { Card } from './ui';
@@ -53,6 +54,7 @@ export default function AgentPanel({
   return (
     <div className="space-y-5">
       <PolicyCard agent={agent} policy={policy} available={parseUint(availableData)} />
+      <Activity agent={agent} refresh={refresh} />
       {isOwner ? (
         <>
           <Recipients agent={agent} refresh={refresh + tick} onChanged={onChanged} />

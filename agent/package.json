@@ -1,0 +1,13 @@
+{
+  "name": "agentleash-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "status": "node --env-file-if-exists=.env run.mjs status",
+    "pay": "node --env-file-if-exists=.env run.mjs pay",
+    "demo": "node --env-file-if-exists=.env run.mjs demo"
+  },
+  "dependencies": {
+    "@stacks/transactions": "7.6.0"
+  }
+}

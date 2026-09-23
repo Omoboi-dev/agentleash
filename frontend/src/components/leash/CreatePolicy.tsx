@@ -70,7 +70,7 @@ export default function CreatePolicy({ owner, onCreated }: { owner: string; onCr
           {depositMicro ? `Create and deposit ${formatStx(depositMicro)} STX` : 'Create policy'}
         </Button>
       </div>
-      <TxNotice tx={tx} onSuccess={() => onCreated(submitted.current)} />
+      <TxNotice tx={tx} onSuccess={() => { setAgent(''); onCreated(submitted.current); }} />
     </Card>
   );
 }
