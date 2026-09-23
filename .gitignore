@@ -22,3 +22,6 @@ frontend/out/
 # OS
 .DS_Store
 *.pem
+
+# Work order for the coding agent
+BUILD.md
